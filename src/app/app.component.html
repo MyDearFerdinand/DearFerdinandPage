@@ -1,0 +1,260 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;1,300&display=swap");
+</style>
+<div class="toolbar" role="banner">
+  <img class="img-responsive" src="assets/images/logo.png" />
+  <a class="body-normal" href="/">MD_FERDINAND</a>
+  <div class="spacer"></div>
+  <a
+    aria-label="Angular on twitter"
+    target="_blank"
+    rel="noopener"
+    href="https://www.linkedin.com/in/vladyslav-maidaniuk-32b6451a8/"
+    title="LinkedIn"
+    class="linkedin"
+  >
+    <img class="img-responsive" src="assets/images/linkedin.png" />
+  </a>
+  <a
+    aria-label="Angular on YouTube"
+    target="_blank"
+    rel="noopener"
+    href="https://www.facebook.com/vladyslav.maidaniuk/"
+    title="Facebook"
+  >
+    <img class="img-responsive" src="assets/images/facebook.png" />
+  </a>
+  <a
+    aria-label="Angular on YouTube"
+    target="_blank"
+    rel="noopener"
+    href="https://www.instagram.com/mydearferdinand/"
+    title="Instagram"
+  >
+    <img class="img-responsive" src="assets/images/instagram.png" />
+  </a>
+</div>
+<div class="cursor small"></div>
+<div class="content" role="main">
+  <!-- Highlight Card -->
+  <div class="card highlight-card card-small">
+    <h1 id="greeting">My name is Vlad, <br />{{ title }}</h1>
+  </div>
+  <div class="card highlight-card card-small">
+    <h1 id="greeting"> I skilled in design and development</h1>
+  </div>
+  <!-- Resources -->
+  <h2>My projects</h2>
+  <p>Here are some links to my previous projects</p>
+
+  <div class="card-container">
+    <a
+      class="card"
+      target="_blank"
+      rel="noopener"
+      href="https://new-horizon-poland.netlify.app/"
+    >
+      <span>New Horison</span>
+    </a>
+
+    <a class="card" target="_blank" rel="noopener" href="/">
+      <span>O,Lalka!</span>
+    </a>
+
+    <a
+      class="card"
+      target="_blank"
+      rel="noopener"
+      href="https://www.linkedin.com/company/job-autopilot-com/"
+    >
+      <span>Job Autopilot</span>
+    </a>
+
+    <a class="card" target="_blank" rel="noopener" href="/">
+      <span>...</span>
+    </a>
+
+    <a class="card" target="_blank" rel="noopener" href="/">
+      <span>...</span>
+    </a>
+  </div>
+
+  <!-- Next Steps -->
+  <h2>Technologies assumed</h2>
+  <p>There is list of my skills</p>
+
+  <input type="hidden" #selection />
+
+  <div class="card-container">
+    <button
+      class="card card-small"
+      (click)="selection.value = 'component'"
+      tabindex="0"
+    >
+      <span>HTML</span>
+    </button>
+
+    <button
+      class="card card-small"
+      (click)="selection.value = 'css'"
+      tabindex="0"
+    >
+      <span>CSS</span>
+    </button>
+
+    <button
+      class="card card-small"
+      (click)="selection.value = 'js'"
+      tabindex="0"
+    >
+      <span>JavaScript</span>
+    </button>
+
+    <button
+      class="card card-small"
+      (click)="selection.value = 'ts'"
+      tabindex="0"
+    >
+      <span>TypeScript</span>
+    </button>
+
+    <button
+      class="card card-small"
+      (click)="selection.value = 'react'"
+      tabindex="0"
+    >
+      <span>ReactJS</span>
+    </button>
+
+    <button
+      class="card card-small"
+      (click)="selection.value = 'angular'"
+      tabindex="0"
+    >
+      <span>Angular2+</span>
+    </button>
+
+    <button
+      class="card card-small"
+      (click)="selection.value = 'mongo'"
+      tabindex="0"
+    >
+      <span>MongoDB</span>
+    </button>
+
+    <button
+      class="card card-small"
+      (click)="selection.value = 'net'"
+      tabindex="0"
+    >
+      <span>.NET</span>
+    </button>
+
+    <button
+      class="card card-small"
+      (click)="selection.value = 'sql'"
+      tabindex="0"
+    >
+      <span>SQL</span>
+    </button>
+
+    <button
+      class="card card-small"
+      (click)="selection.value = 'node'"
+      tabindex="0"
+    >
+      <span>Node.js</span>
+    </button>
+
+    <button
+      class="card card-small"
+      (click)="selection.value = 'express'"
+      tabindex="0"
+    >
+      <span>ExpressJS</span>
+    </button>
+
+    <button
+      class="card card-small"
+      (click)="selection.value = 'asp'"
+      tabindex="0"
+    >
+      <span>ASP.NET MVC</span>
+    </button>
+  </div>
+
+  <!-- Terminal -->
+  <div class="terminal" [ngSwitch]="selection.value">
+    <pre *ngSwitchDefault>Some HTML code shown here</pre>
+    <pre *ngSwitchCase="'css'">Some CSS code shown here</pre>
+    <pre *ngSwitchCase="'js'">Some JS code shown here</pre>
+    <pre *ngSwitchCase="'ts'">Some TS code shown here</pre>
+    <pre *ngSwitchCase="'react'">Some React code shown here</pre>
+    <pre *ngSwitchCase="'angular'">Some Angular code shown here</pre>
+    <pre *ngSwitchCase="'mongo'">Some MongoDB code shown here</pre>
+    <pre *ngSwitchCase="'net'">Some .NET code shown here</pre>
+    <pre *ngSwitchCase="'sql'">Some SQL code shown here</pre>
+    <pre *ngSwitchCase="'node'">Some Node.js code shown here</pre>
+    <pre *ngSwitchCase="'express'">Some Express.js code shown here</pre>
+    <pre *ngSwitchCase="'asp'">Some ASP.NET MVC code shown here</pre>
+  </div>
+
+  <!-- Links -->
+  <div class="card-container">
+    <a
+      class="circle-link"
+      title="Find a Local Meetup"
+      href="https://t.me/DearFerdinand"
+      target="_blank"
+      rel="noopener"
+    >
+      <img class="img-responsive" src="assets/images/telegram.png" />
+    </a>
+
+    <a
+      class="circle-link"
+      title="Join the Conversation on Discord"
+      href="https://www.facebook.com/vladyslav.maidaniuk/"
+      target="_blank"
+      rel="noopener"
+    >
+      <img class="img-responsive" src="assets/images/facebook2.png" />
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Have more questions?&nbsp;
+    <a href="https://github.com/MyDearFerdinand" target="_blank" rel="noopener">
+      Visit my GitHub page
+      <div class="github-star-badge">
+        <img class="img-responsive" src="assets/images/git.png" />
+      </div>
+    </a>
+    <a href="https://github.com/MyDearFerdinand" target="_blank" rel="noopener">
+      <svg
+        class="material-icons"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          fill="#1976d2"
+        />
+        <path d="M0 0h24v24H0z" fill="none" />
+      </svg>
+    </a>
+  </footer>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
